@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Header from './components/Header/Header';
 import Home from './pages/Home/Home';
 import FicheLogement from './pages/Fiche-Logement/Fiche-Logement';
-import Apropos from './pages/About/A-propos';
+import About from './pages/About/About';
 import Error404 from './pages/Error404/404';
-import Header from './components/Header/Header';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,7 +16,7 @@ root.render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/fiche-logement" element={<FicheLogement />} />
-        <Route path="/a-propos" element={<Apropos />} />
+        <Route path="/a-propos" element={<About />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
   </BrowserRouter>
