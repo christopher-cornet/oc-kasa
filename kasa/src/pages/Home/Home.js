@@ -5,13 +5,16 @@ import image1 from '../../images/Image1.png';
 
 function Home() {
     return (
-        <div>
+        <main>
             <section className={styles.imageHeader}>
-                <img src={image1} alt="Image1" className={styles.image1} />
+                <img src={image1} alt="Île avec des rochers, des arbres et la mer" className={styles.image1} />
                 <h1 className={styles.title}>Chez vous, partout et ailleurs</h1>
             </section>
             <Link to="/fiche-logement"><button className={styles.button}>Logement</button></Link>
-        </div>
+            <section className={styles.cardsContainer}>
+
+            </section>
+        </main>
     );
 }
 
