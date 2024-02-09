@@ -2,6 +2,7 @@ import styles from './Home.module.scss';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import image1 from '../../images/Image1.png';
+import Card from '../../components/Card/Card';
 
 function Home() {
     return (
@@ -12,7 +13,7 @@ function Home() {
             </section>
             <Link to="/fiche-logement"><button className={styles.button}>Logement</button></Link>
             <section className={styles.cardsContainer}>
-
+                <Card />
             </section>
         </main>
     );

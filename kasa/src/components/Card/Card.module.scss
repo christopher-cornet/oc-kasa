@@ -1,0 +1,16 @@
+.cardImg {
+    height: 200px;
+    width: 300px;
+    border-radius: 15px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 50px;
+    padding: 50px 50px;
+    justify-items: center;
+    p {
+        margin: 0;
+    }
+}
