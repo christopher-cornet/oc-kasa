@@ -4,6 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
 import FicheLogement from './pages/Fiche-Logement/Fiche-Logement';
 import About from './pages/About/About';
@@ -19,6 +20,7 @@ root.render(
         <Route path="/a-propos" element={<About />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
+      <Footer />
   </BrowserRouter>
 );
 

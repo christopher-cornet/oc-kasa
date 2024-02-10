@@ -1,0 +1,22 @@
+footer {
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    img {
+        padding-top: 50px;
+    }
+    p {
+        color: #fff;
+        padding-top: 20px;
+        padding-bottom: 15px;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 480px) {
+    p {
+        width: 140px;
+    }
+}
