@@ -30,6 +30,7 @@
     margin: 0 100px;
     margin-top: 25px;
     border-radius: 15px;
+    margin-bottom: 50px;
 }
 
 @media screen and (max-width: 768px) {
@@ -45,8 +46,7 @@
     }
 
     .cardsContainer {
-        margin: 0 30px;
-        margin-top: 25px;
+        margin: 25px 30px 50px 30px;
         background-color: #fff;
     }
 }
@@ -68,8 +68,7 @@
     }
 
     .cardsContainer {
-        margin: 0 30px;
-        margin-top: 25px;
+        margin: 25px 30px 50px 30px;
     }
 }
 
@@ -79,7 +78,6 @@
     }
 
     .cardsContainer {
-        margin: 0 20px;
-        margin-top: 25px;
+        margin: 25px 20px 50px 20px;
     }
 }
