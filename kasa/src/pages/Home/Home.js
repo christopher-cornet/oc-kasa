@@ -1,6 +1,5 @@
 import styles from './Home.module.scss';
 import React from 'react';
-import { Link } from 'react-router-dom';
 import image1 from '../../images/Image1.png';
 import Card from '../../components/Card/Card';
 

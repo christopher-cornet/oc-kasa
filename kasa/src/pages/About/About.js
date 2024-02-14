@@ -3,7 +3,7 @@ import styles from './About.module.scss';
 function About() {
     return (
         <div>
-            <h1 className={styles.title}>About</h1>
+            <img src="" alt="Photo bannière" className={styles.banner} />
         </div>
     );
 }
