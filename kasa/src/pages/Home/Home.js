@@ -1,15 +1,13 @@
 import styles from './Home.module.scss';
 import React from 'react';
-import image1 from '../../images/Image1.png';
+import Image1 from '../../images/Image1.png';
 import Card from '../../components/Card/Card';
+import Banner from '../../components/Banner/Banner';
 
 function Home() {
     return (
         <main>
-            <section className={styles.imageHeader}>
-                <img src={image1} alt="Île avec des rochers, des arbres et la mer" className={styles.image1} />
-                <h1 className={styles.title}>Chez vous, partout et ailleurs</h1>
-            </section>
+            <Banner src={Image1} alt="Île avec des rochers, des arbres et la mer" title="Chez vous, partout et ailleurs" />
             <section className={styles.cardsContainer}>
                 <Card />
             </section>

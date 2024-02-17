@@ -5,8 +5,7 @@ import Image2 from '../../images/Image2.png';
 function About() {
     return (
         <div>
-            <Banner src={Image2} alt="Montagnes et forêts" />
-            {/* <img src="" alt="Bannière" className={styles.banner} /> */}
+            <Banner src={Image2} alt="Montagnes et forêts" title="" />
         </div>
     );
 }

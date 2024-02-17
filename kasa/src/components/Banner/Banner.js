@@ -1,11 +1,11 @@
 import styles from './Banner.module.scss';
 
-function Banner({ src, alt }) {
+function Banner({ src, alt, title }) {
     return (
-        <div>
-            <img src={src} alt={alt} />
-            <h1 className={styles.title}></h1>
-        </div>
+        <section className={styles.imageHeader}>
+            <img src={src} alt={alt} className={styles.image1} />
+            <h1 className={styles.title}>{title}</h1>
+        </section>
     );
 }
 
