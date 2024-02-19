@@ -1,21 +1,10 @@
-import styles from './Card.module.scss';
-import data from '../../logements.json';
-import { Link } from 'react-router-dom';
+// import styles from './Card.module.scss';
 
-function Card() {
-    console.log(data);
-    const cardData = data.slice(0, 6).map((logement) =>
-        <Link to={`/fiche-logement/${logement.id}`} key={logement.id}>
-            <div>
-                <img src={logement.cover} className={styles.cardImg} alt="Appartement à louer" />
-                <p>{logement.title}</p>
-            </div>
-        </Link>
-    );
-
+function Card({ src, className, alt, title }) {
     return (
-        <div className={styles.grid}>
-            {cardData}
+        <div>
+            <img src={src} className={className} alt={alt} />
+            <p>{title}</p>
         </div>
     );
 }

@@ -33,6 +33,23 @@
     margin-bottom: 50px;
 }
 
+.cardImg {
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 50px;
+    row-gap: 25px;
+    padding: 50px 50px;
+    p {
+        margin: 0;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .title {
         left: 45%;
@@ -48,6 +65,12 @@
     .cardsContainer {
         margin: 25px 30px 50px 30px;
         background-color: #fff;
+    }
+
+    .grid {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
     }
 }
 
