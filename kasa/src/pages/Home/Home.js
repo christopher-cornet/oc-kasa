@@ -7,7 +7,7 @@ import data from '../../logements.json';
 import { Link } from 'react-router-dom';
 
 function Home() {
-    const cardData = data.slice(0, 6).map((logement) =>
+    const cardData = data.map((logement) =>
         <Link to={`/fiche-logement/${logement.id}`} key={logement.id}>
             <Card src={logement.cover} className={styles.cardImg} alt="Appartement à louer" title={logement.title} />
         </Link>
