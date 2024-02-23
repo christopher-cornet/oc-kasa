@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Collapse.module.scss';
+import Arrow from '../../images/chevron-up.svg';
 
 function Collapse({ title, text }) {
     const [buttonClick, setButtonClick] = useState(false);
@@ -13,7 +14,7 @@ function Collapse({ title, text }) {
             <h1 className={styles.valueTitle}>{buttonClick}</h1>
             <div className={styles.title_arrow}>
                 <p className={styles.valueTitle}>{title}</p>
-                <button onClick={handleClick} className={styles.arrow}>V</button>
+                <img src={Arrow} alt="arrow" className={buttonClick ? styles.arrowUp : styles.arrowDown} />
             </div>
             <div className={styles.textContainer}>
                 <p className={styles.valueText}>{text}</p>
