@@ -4,9 +4,11 @@ import Arrow from '../../images/chevron-up.svg';
 
 function Collapse({ title, text }) {
     const [buttonClick, setButtonClick] = useState(false);
+    const [showText, setshowText] = useState(false);
 
     const handleClick = () => {
-        buttonClick ? setButtonClick(false) : setButtonClick(true);
+        setButtonClick(!buttonClick);
+        setshowText(!showText);
     }
 
     return (
@@ -14,7 +16,10 @@ function Collapse({ title, text }) {
             <h1 className={styles.valueTitle}>{buttonClick}</h1>
             <div className={styles.title_arrow}>
                 <p className={styles.valueTitle}>{title}</p>
-                <img src={Arrow} alt="arrow" className={buttonClick ? styles.arrowUp : styles.arrowDown} />
+                <div onClick={handleClick} className={styles.arrowContainer}>
+                    <img src={Arrow} alt="arrow" className={buttonClick ? styles.arrowUp : styles.arrowDown} />
+                </div>
+                {/* <img onClick={handleClick} src={Arrow} alt="arrow" className={buttonClick ? styles.arrowUp : styles.arrowDown} /> */}
             </div>
             <div className={styles.textContainer}>
                 <p className={styles.valueText}>{text}</p>
