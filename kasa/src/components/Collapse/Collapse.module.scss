@@ -17,10 +17,21 @@
 }
 
 .textContainer {
-    // background-color: #FBFBFB;
-    background-color: #bbbbbb;
+    background-color: #FBFBFB;
     margin-top: -50px;
     opacity: 0;
+    position: relative;
+    z-index: 10;
+    max-width: 70vw;
+    // padding: 10px;
+}
+
+.showText {
+    animation: showText 0.4s forwards;
+}
+
+.hideText {
+    animation: hideText 0.4s forwards;
 }
 
 .valueText {
@@ -38,7 +49,9 @@
 
 .arrowContainer {
     display: flex;
-    cursor: pointer;  
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
 }
 
 .arrowDown, .arrowUp {
@@ -47,11 +60,11 @@
 }
 
 .arrowUp {
-    animation: arrowDown 0.5s forwards;
+    animation: arrowDown 0.4s forwards;
 }
 
 .arrowDown {
-    animation: arrowUp 0.5s forwards;
+    animation: arrowUp 0.4s forwards;
 }
 
 @keyframes arrowDown {
@@ -69,5 +82,29 @@
     }
     100% {
         transform: rotate(0deg);
+    }
+}
+
+@keyframes showText {
+    0% {
+        margin-top: -50px;
+        opacity: 0;
+    }
+    100% {
+        margin-top: 0px;
+        opacity: 1;
+        max-width: 100%;
+    }
+}
+
+@keyframes hideText {
+    0% {
+        margin-top: 0px;
+        opacity: 1;
+    }
+    100% {
+        margin-top: -50px;
+        opacity: 0;
+        max-width: 70vw;
     }
 }

@@ -19,9 +19,8 @@ function Collapse({ title, text }) {
                 <div onClick={handleClick} className={styles.arrowContainer}>
                     <img src={Arrow} alt="arrow" className={buttonClick ? styles.arrowUp : styles.arrowDown} />
                 </div>
-                {/* <img onClick={handleClick} src={Arrow} alt="arrow" className={buttonClick ? styles.arrowUp : styles.arrowDown} /> */}
             </div>
-            <div className={styles.textContainer}>
+            <div className={showText ? `${styles.textContainer} ${styles.showText}` : `${styles.textContainer} ${styles.hideText}`}>
                 <p className={styles.valueText}>{text}</p>
             </div>
         </div>

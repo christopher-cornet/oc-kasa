@@ -1,4 +1,4 @@
-// import styles from './About.module.scss';
+import styles from './About.module.scss';
 import Banner from '../../components/Banner/Banner';
 import Image2 from '../../images/Image2.png';
 import Collapse from '../../components/Collapse/Collapse';
@@ -7,7 +7,7 @@ function About() {
     return (
         <div>
             <Banner src={Image2} alt="Montagnes et forêts" />
-            <main>
+            <main className={styles.main}>
                 <Collapse
                     title="Fiabilité"
                     text="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes."
