@@ -13,7 +13,6 @@ function Collapse({ title, text }) {
 
     return (
         <div className={styles.value}>
-            <h1 className={styles.valueTitle}>{buttonClick}</h1>
             <div className={styles.title_arrow}>
                 <p className={styles.valueTitle}>{title}</p>
                 <div onClick={handleClick} className={styles.arrowContainer}>
