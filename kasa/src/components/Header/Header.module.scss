@@ -12,6 +12,10 @@ a, a:visited, ul {
 }
 
 .homeLink, .aboutLink {
+    font-size: 20px;
+}
+
+.homeLink_CurrentPath, .aboutLink_CurrentPath {
     text-decoration: underline;
     font-size: 20px;
 }
