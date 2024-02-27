@@ -48,6 +48,14 @@ header {
         width: 130px;
         height: 40px;
     }
+
+    .homeLink, .aboutLink {
+        text-transform: uppercase;
+    }
+    
+    .homeLink_CurrentPath, .aboutLink_CurrentPath {
+        text-transform: uppercase;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -63,6 +71,14 @@ header {
     .logoKasa {
         width: 130px;
         height: 40px;
+    }
+
+    .homeLink, .aboutLink {
+        text-transform: uppercase;
+    }
+    
+    .homeLink_CurrentPath, .aboutLink_CurrentPath {
+        text-transform: uppercase;
     }
 }
 
