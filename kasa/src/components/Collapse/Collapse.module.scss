@@ -15,7 +15,6 @@
     background-color: #FBFBFB;
     margin-top: -50px;
     opacity: 0;
-    height: 25px;
     max-width: 70vw;
     padding: 10px;
 }
@@ -88,6 +87,7 @@
         margin-top: 0px;
         opacity: 1;
         max-width: 100%;
+        height: auto;
     }
 }
 
@@ -100,6 +100,7 @@
         margin-top: -50px;
         opacity: 0;
         max-width: 70vw;
+        height: 25px;
     }
 }
 
@@ -107,14 +108,8 @@
     .value {
         margin: 0 30px;
     }
-
-    .valueText {
-        height: 25px;
-    }
 }
 
 @media screen and (max-width: 480px) {
-    .textContainer {
-        margin-bottom: 85px;
-    }
+    
 }
