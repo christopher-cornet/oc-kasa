@@ -32,10 +32,6 @@
     margin: 0;
 }
 
-.value {
-    margin: 0 220px;
-}
-
 .valueTitle {
     margin: 0;
 }
@@ -101,11 +97,5 @@
         opacity: 0;
         max-width: 70vw;
         height: 25px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .value {
-        margin: 0 30px;
     }
 }
