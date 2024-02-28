@@ -58,6 +58,9 @@
     gap: 50px;
     display: flex;
     justify-content: space-between;
+    > div {
+        width: 50%;
+    }
 }
 
 .value {
