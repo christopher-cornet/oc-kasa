@@ -9,12 +9,20 @@ function Gallery() {
 
     // const location = useLocation();
 
+    let arrowLeft = () => {
+
+    }
+
+    let arrowRight = () => {
+
+    }
+
     return (
         <div className={styles.bannerContainer}>
             <img className={styles.banner} src={data[0].cover} alt="Appartement à louer" />
             <div className={styles.arrows}>
-                <img className={styles.arrow} src={arrowLeft} alt="Flèche gauche" />
-                <img className={styles.arrow} src={arrowRight} alt="Flèche droite" />
+                <img className={styles.arrow} onClick={arrowLeft} src={arrowLeft} alt="Flèche gauche" />
+                <img className={styles.arrow} onClick={arrowRight} src={arrowRight} alt="Flèche droite" />
             </div>
         </div>
     );
