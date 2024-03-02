@@ -30,6 +30,9 @@
 .valueText {
     color: #000;
     margin: 0;
+    > p {
+        margin: 0;
+    }
 }
 
 .valueTitle {

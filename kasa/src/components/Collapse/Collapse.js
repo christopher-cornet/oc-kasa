@@ -20,7 +20,7 @@ function Collapse({ title, text }) {
                 </div>
             </div>
             <div className={showText ? `${styles.textContainer} ${styles.showText}` : `${styles.textContainer} ${styles.hideText}`}>
-                <p className={styles.valueText}>{text}</p>
+                <div className={styles.valueText}>{text}</div>
             </div>
         </div>
     )
