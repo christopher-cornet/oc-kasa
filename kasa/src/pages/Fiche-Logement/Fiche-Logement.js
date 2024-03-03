@@ -14,6 +14,8 @@ function Logement() {
     let [description, setDescription] = useState("");
     let [equipments, setEquipments] = useState("");
 
+    console.log(data);
+
     const location = useLocation();
 
     useEffect(() => {

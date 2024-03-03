@@ -16,7 +16,7 @@ function Gallery() {
         data.forEach(element => {
             if (location.pathname === `/fiche-logement/${element.id}`) {
                 console.log("Logement actuel : ", element.id);
-                setMaxPicture(element.pictures.length - 1);
+                setMaxPicture(element.pictures.length);
                 setBanner(element.cover);
             }
         });
@@ -24,10 +24,20 @@ function Gallery() {
 
     let handleClick = (arrow) => {
         if (arrow === 'left') {
-            setPicture(currentPicture - 1);
+            if (currentPicture === 1) {
+                setPicture(maxPicture);
+            }
+            else {
+                setPicture(currentPicture - 1);
+            }
         }
         else if (arrow === 'right') {
-            setPicture(currentPicture + 1);
+            if (currentPicture === maxPicture) {
+                setPicture(1);
+            }
+            else {
+                setPicture(currentPicture + 1);
+            }
             console.log("Current picture : ", currentPicture);
         }
     }
