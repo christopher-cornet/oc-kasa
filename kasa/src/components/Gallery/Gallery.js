@@ -6,39 +6,45 @@ import arrowRight from '../../images/arrowRight.png';
 import { useEffect, useState } from 'react';
 
 function Gallery() {
-    let [banner, setBanner] = useState(1);
-    let [currentPicture, setPicture] = useState(1);
-    let [maxPicture, setMaxPicture] = useState(1);
+    let [banner, setBanner] = useState("");
+    let [pictureNumber, setPictureNumber] = useState(1);
+    let [maximumPictures, setMaximumPictures] = useState(1);
+    let [currentElement, setCurrentElement] = useState("");
 
     const location = useLocation();
 
     useEffect(() => {
         data.forEach(element => {
             if (location.pathname === `/fiche-logement/${element.id}`) {
-                console.log("Logement actuel : ", element.id);
-                setMaxPicture(element.pictures.length);
-                setBanner(element.cover);
+                setCurrentElement(element);
+                setMaximumPictures(element.pictures.length);
+                setBanner(element.pictures[0]);
+
+                console.log("Current element : ", currentElement);
             }
         });
     }, [location.pathname]);
 
     let handleClick = (arrow) => {
         if (arrow === 'left') {
-            if (currentPicture === 1) {
-                setPicture(maxPicture);
+            if (pictureNumber === 1) {
+                setPictureNumber(maximumPictures);
+                setBanner(currentElement.pictures[currentElement.pictures.length - 1]);
             }
             else {
-                setPicture(currentPicture - 1);
+                setPictureNumber(pictureNumber - 1);
+                setBanner(currentElement.pictures[pictureNumber - 2]);
             }
         }
         else if (arrow === 'right') {
-            if (currentPicture === maxPicture) {
-                setPicture(1);
+            if (pictureNumber === maximumPictures) {
+                setPictureNumber(1);
+                setBanner(currentElement.pictures[0]);
             }
             else {
-                setPicture(currentPicture + 1);
+                setPictureNumber(pictureNumber + 1);
+                setBanner(currentElement.pictures[pictureNumber]);
             }
-            console.log("Current picture : ", currentPicture);
         }
     }
 
@@ -49,7 +55,7 @@ function Gallery() {
                 <img className={styles.arrow} onClick={() => handleClick('left')} src={arrowLeft} alt="Flèche gauche" />
                 <img className={styles.arrow} onClick={() => handleClick('right')} src={arrowRight} alt="Flèche droite" />
             </div>
-            <p className={styles.pictureNumber}>{currentPicture}/{maxPicture}</p>
+            <p className={styles.pictureNumber}>{pictureNumber}/{maximumPictures}</p>
         </div>
     );
 }
