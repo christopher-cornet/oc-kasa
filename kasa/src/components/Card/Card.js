@@ -1,10 +1,10 @@
-// import styles from './Card.module.scss';
+import styles from './Card.module.scss';
 
 function Card({ src, className, alt, title }) {
     return (
         <div>
             <img src={src} className={className} alt={alt} />
-            <p>{title}</p>
+            <p className={styles.cardTitle}>{title}</p>
         </div>
     );
 }

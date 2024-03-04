@@ -23,7 +23,7 @@ function Gallery() {
                 console.log("Current element : ", currentElement);
             }
         });
-    }, [location.pathname]);
+    }, [currentElement, location.pathname]);
 
     let handleClick = (arrow) => {
         if (arrow === 'left') {
