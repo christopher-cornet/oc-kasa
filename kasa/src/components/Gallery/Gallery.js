@@ -19,8 +19,6 @@ function Gallery() {
                 setCurrentElement(element);
                 setMaximumPictures(element.pictures.length);
                 setBanner(element.pictures[0]);
-
-                console.log("Current element : ", currentElement);
             }
         });
     }, [currentElement, location.pathname]);
