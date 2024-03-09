@@ -26,12 +26,19 @@
 .informationsHost {
     display: flex;
     align-items: center;
+    flex-direction: column;
     margin-top: 20px;
     gap: 20px;
-    img {
+    .host img {
         border-radius: 50%;
         height: 60px;
     }
+}
+
+.host {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .hostName {
@@ -43,15 +50,34 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-// .tags {
-    
-// }
+.tagsContainer {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
 
 .tag {
     display: inline-block;
     background-color: #FF6060;
+    margin: 0;
+    // margin-right: 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
     color: #fff;
 }
+
+.ratingContainer {
+    > img {
+        margin: 0 5px;
+    }
+}
+
+// .backgroundTag {
+//     display: inline-block;
+//     border: 1px solid #000;
+//     margin-right: 10px;
+// }
 
 .details {
     margin-bottom: 20px;
@@ -87,5 +113,19 @@
 }
 
 @media screen and (max-width: 480px) {
-    
+    .bannerTitle {
+        font-size: 28px;
+    }
+
+    .backgroundTag {
+        border: 0;
+    }
+
+    .tag {
+        border-radius: 10px;
+    }
+
+    .informationsHost {
+        flex-direction: row-reverse;
+    }
 }

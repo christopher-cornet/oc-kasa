@@ -4,6 +4,10 @@ import data from '../../logements.json';
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import Collapse from '../../components/Collapse/Collapse';
+import StarActive from '../../images/StarActive.png';
+import StarInactive from '../../images/StarInactive.png';
+
+console.log(data);
 
 function Logement() {
     let [title, setTitle] = useState("");
@@ -13,8 +17,23 @@ function Logement() {
     let [hostPicture, setHostPicture] = useState("");
     let [description, setDescription] = useState("");
     let [equipments, setEquipments] = useState("");
+    let [rating, setRating] = useState(0);
 
     const location = useLocation();
+
+    const generateStars = (rating) => {
+        const stars = [];
+
+        for (let i = 0; i < rating; i++) {
+            stars.push(<img key={i} src={StarActive} alt="Étoile active" />);
+        }
+        
+        for (let i = rating; i < 5; i++) {
+            stars.push(<img key={i} src={StarInactive} alt="Étoile inactive" />);
+        }
+
+        return stars;
+    };
 
     useEffect(() => {
         data.forEach(element => {
@@ -22,14 +41,23 @@ function Logement() {
                 return <p key={index}>{equipment}</p>;
             });
 
+            const tags = element.tags.map((tag, index) => {
+                return <div key={index} className={styles.backgroundTag}>
+                    <p key={index} className={styles.tag}>{tag}</p>
+                </div>;
+            });
+
             if (location.pathname === `/fiche-logement/${element.id}`) {
+                const stars = parseInt(element.rating);
+
                 setTitle(element.title);
                 setCurrentLocation(element.location);
-                setTags(element.tags);
+                setTags(tags);
                 setHostName(element.host.name);
                 setHostPicture(element.host.picture);
                 setDescription(element.description);
                 setEquipments(equipments);
+                setRating(stars);
             }
         });
     }, [location.pathname]);
@@ -44,16 +72,19 @@ function Logement() {
                         <h1 className={styles.bannerTitle}>{title}</h1>
                         <h2 className={styles.location}>{currentLocation}</h2>
 
-                        <div className={styles.tagContainer}>
-                            <div className={styles.tags} key={tags}>
-                                <p className={styles.tag}>{tags}</p>
-                            </div>
+                        <div className={styles.tagsContainer}>
+                            {tags}
                         </div>
                     </div>
 
                     <div className={styles.informationsHost}>
-                        <h1 className={styles.hostName}>{hostName}</h1>
-                        <img className={styles.hostPicture} src={hostPicture} alt="Propriétaire de l'appartement" />
+                        <div className={styles.host}>
+                            <h1 className={styles.hostName}>{hostName}</h1>
+                            <img className={styles.hostPicture} src={hostPicture} alt="Propriétaire de l'appartement" />
+                        </div>
+                        <div className={styles.ratingContainer}>
+                            {generateStars(rating)}
+                        </div>
                     </div>
                 </section>
 

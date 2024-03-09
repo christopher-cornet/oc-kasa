@@ -20,6 +20,10 @@ function Gallery() {
                 setMaximumPictures(element.pictures.length);
                 setBanner(element.pictures[0]);
             }
+
+            if (element.pictures <= 1) {
+                
+            }
         });
     }, [currentElement, location.pathname]);
 
