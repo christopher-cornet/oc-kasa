@@ -25,32 +25,6 @@
     filter: brightness(0.6);
 }
 
-.cardsContainer {
-    background-color: #F6F6F6;
-    margin: 0 100px;
-    margin-top: 25px;
-    border-radius: 15px;
-    margin-bottom: 50px;
-}
-
-.cardImg {
-    object-fit: cover;
-    height: 400px;
-    width: 100%;
-    border-radius: 15px;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 50px;
-    row-gap: 25px;
-    padding: 50px 50px;
-    p {
-        margin: 0;
-    }
-}
-
 @media screen and (max-width: 768px) {
     .title {
         left: 45%;
@@ -62,24 +36,9 @@
     .imageHeader {
         margin: 25px 30px 0 30px;
     }
-
-    .cardsContainer {
-        margin: 25px 30px 50px 30px;
-        background-color: #fff;
-    }
-
-    .grid {
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-    }
 }
 
 @media screen and (max-width: 480px) {
-    .imageHeader {
-        margin: 25px 30px 0 30px;
-    }
-
     .image1 {
         height: 125px;
     }
@@ -90,18 +49,10 @@
         width: 245px;
         line-height: 32px;
     }
-
-    .cardsContainer {
-        margin: 25px 30px 50px 30px;
-    }
 }
 
 @media screen and (max-width: 375px) {
     .imageHeader {
         margin: 25px 20px 0 20px;
-    }
-
-    .cardsContainer {
-        margin: 25px 20px 50px 20px;
     }
 }

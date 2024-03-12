@@ -1,3 +1,139 @@
-.title {
-    color: #421414;
+.ficheLogement {
+    margin: 0 100px;
+}
+
+.informationsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bannerTitle {
+    color: #FF6060;
+    font-weight: 500;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    font-size: 32px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.location {
+    font-weight: 500;
+    margin: 0;
+    font-size: 18px;
+}
+
+.informationsHost {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 20px;
+    .host img {
+        border-radius: 50%;
+        height: 60px;
+    }
+}
+
+.host {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.hostName {
+    width: 100px;
+    text-align: end;
+    color: #FF6060;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.tagsContainer {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #FF6060;
+    margin: 0;
+    // margin-right: 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.ratingContainer {
+    > img {
+        margin: 0 5px;
+    }
+}
+
+// .backgroundTag {
+//     display: inline-block;
+//     border: 1px solid #000;
+//     margin-right: 10px;
+// }
+
+.details {
+    margin-bottom: 20px;
+    gap: 50px;
+    display: flex;
+    justify-content: space-between;
+    > div {
+        width: 50%;
+    }
+}
+
+.value {
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .informationsContainer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .details {
+        flex-direction: column;
+        gap: 0;
+        > div {
+            width: 100%;
+        }
+    }
+
+    .ficheLogement {
+        margin: 0 30px;
+    }
+
+    .informationsHost {
+        flex-direction: row-reverse;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .bannerTitle {
+        font-size: 28px;
+    }
+
+    .backgroundTag {
+        border: 0;
+    }
+
+    .tag {
+        border-radius: 10px;
+    }
+
+    .informationsHost {
+        flex-direction: row-reverse;
+        width: 100%;
+        justify-content: space-between;
+    }
 }

@@ -1,0 +1,59 @@
+.bannerContainer {
+    margin-top: 50px;
+    margin-bottom: 170px;
+}
+
+.banner {
+    border-radius: 25px;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.arrow {
+    &.hidden {
+        opacity: 0;
+        &:hover {
+            cursor: default;
+        }
+    }
+}
+
+.arrows {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 25px;
+    margin-top: -285px;
+    cursor: pointer;
+}
+
+.pictureNumber {
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    top: 110px;
+    font-family: "Montserrat", sans-serif;
+    &.hidden {
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .pictureNumber {
+        opacity: 0;
+    }
+
+    .bannerContainer {
+        margin-bottom: 130px;
+    }
+
+    .banner {
+        height: 400px;
+    }
+
+    .arrows {
+        margin-top: -235px;
+    }
+}

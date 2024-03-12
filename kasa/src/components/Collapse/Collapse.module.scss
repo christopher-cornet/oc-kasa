@@ -1,0 +1,108 @@
+.title_arrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 700;
+    border-radius: 5px;
+    background-color: #FF6060;
+    margin-top: 32px;
+    padding: 10px 20px;
+}
+
+.textContainer {
+    background-color: #FBFBFB;
+    margin-top: -50px;
+    opacity: 0;
+    max-width: 70vw;
+    padding: 10px;
+}
+
+.showText {
+    animation: showText 0.4s forwards;
+}
+
+.hideText {
+    animation: hideText 0.4s forwards;
+}
+
+.valueText {
+    color: #000;
+    margin: 0;
+    > p {
+        margin: 0;
+    }
+}
+
+.valueTitle {
+    margin: 0;
+}
+
+.arrowContainer {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.arrowDown, .arrowUp {
+    height: 30px;
+    width: 30px;
+}
+
+.arrowUp {
+    animation: arrowDown 0.4s forwards;
+}
+
+.arrowDown {
+    animation: arrowUp 0.4s forwards;
+}
+
+@keyframes arrowDown {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-180deg);
+    }
+}
+
+@keyframes arrowUp {
+    0% {
+      transform: rotate(-180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes showText {
+    0% {
+        margin-top: -50px;
+        opacity: 0;
+        display: none;
+    }
+    100% {
+        margin-top: 0px;
+        display: block;
+        opacity: 1;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@keyframes hideText {
+    0% {
+        margin-top: 0px;
+        opacity: 1;
+    }
+    100% {
+        margin-top: -50px;
+        display: block;
+        opacity: 0;
+        display: none;
+        max-width: 70vw;
+        height: 25px;
+    }
+}
