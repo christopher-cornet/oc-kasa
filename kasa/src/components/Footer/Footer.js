@@ -1,4 +1,4 @@
-import styles from './Footer.module.scss';
+import './Footer.module.scss';
 import LogoKasaFooter from '../../images/logoKasaFooter.png';
 
 function Footer() {
