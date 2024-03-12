@@ -110,6 +110,12 @@
     .ficheLogement {
         margin: 0 30px;
     }
+
+    .informationsHost {
+        flex-direction: row-reverse;
+        width: 100%;
+        justify-content: space-between;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -127,5 +133,7 @@
 
     .informationsHost {
         flex-direction: row-reverse;
+        width: 100%;
+        justify-content: space-between;
     }
 }

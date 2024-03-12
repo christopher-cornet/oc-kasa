@@ -54,10 +54,10 @@ function Gallery() {
         <div className={styles.bannerContainer}>
             <img className={styles.banner} src={banner} alt="Appartement à louer" />
             <div className={styles.arrows}>
-                <img className={styles.arrow} onClick={() => handleClick('left')} src={arrowLeft} alt="Flèche gauche" />
-                <img className={styles.arrow} onClick={() => handleClick('right')} src={arrowRight} alt="Flèche droite" />
+                <img className={maximumPictures === 1 ? `${styles.arrow} ${styles.hidden}` : styles.arrow} onClick={() => handleClick('left')} src={arrowLeft} alt="Flèche gauche" />
+                <img className={maximumPictures === 1 ? `${styles.arrow} ${styles.hidden}` : styles.arrow} onClick={() => handleClick('right')} src={arrowRight} alt="Flèche droite" />
             </div>
-            <p className={styles.pictureNumber}>{pictureNumber}/{maximumPictures}</p>
+            <p className={maximumPictures === 1 ? `${styles.pictureNumber} ${styles.hidden}` : styles.pictureNumber}>{pictureNumber}/{maximumPictures}</p>
         </div>
     );
 }

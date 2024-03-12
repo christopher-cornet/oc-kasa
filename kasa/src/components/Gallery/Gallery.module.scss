@@ -10,6 +10,15 @@
     object-fit: cover;
 }
 
+.arrow {
+    &.hidden {
+        opacity: 0;
+        &:hover {
+            cursor: default;
+        }
+    }
+}
+
 .arrows {
     display: flex;
     justify-content: space-between;
@@ -26,6 +35,9 @@
     position: relative;
     top: 110px;
     font-family: "Montserrat", sans-serif;
+    &.hidden {
+        opacity: 0;
+    }
 }
 
 @media screen and (max-width: 480px) {
