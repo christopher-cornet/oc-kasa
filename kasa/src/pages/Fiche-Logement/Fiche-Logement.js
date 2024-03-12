@@ -6,8 +6,7 @@ import { useLocation } from 'react-router-dom';
 import Collapse from '../../components/Collapse/Collapse';
 import StarActive from '../../images/StarActive.png';
 import StarInactive from '../../images/StarInactive.png';
-
-console.log(data);
+import { useNavigate } from "react-router-dom";
 
 function Logement() {
     let [title, setTitle] = useState("");
@@ -19,7 +18,18 @@ function Logement() {
     let [equipments, setEquipments] = useState("");
     let [rating, setRating] = useState(0);
 
+    const navigate = useNavigate();
     const location = useLocation();
+
+    useEffect(() => {        
+        const id = data.map(element => element.id);
+
+        const currentPageId = location.pathname.split('/').pop();
+
+        if (!id.includes(currentPageId)) {
+            navigate("/error404");
+        }
+    }, [navigate, location.pathname]);
 
     const generateStars = (rating) => {
         const stars = [];

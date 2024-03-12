@@ -9,15 +9,6 @@ import Home from './pages/Home/Home';
 import FicheLogement from './pages/Fiche-Logement/Fiche-Logement';
 import About from './pages/About/About';
 import Error404 from './pages/Error404/404';
-import data from './logements.json';
-
-const id = [];
-
-data.forEach(element => {
-  id.push(element.id);
-});
-
-console.log(id);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -25,13 +16,7 @@ root.render(
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        {id.map(routeId => (
-          <Route
-            key={routeId}
-            path={`/fiche-logement/${routeId}`}
-            element={<FicheLogement id={routeId} />}
-          />
-        ))}
+        <Route path="/fiche-logement/:id" element={<FicheLogement />} />
         <Route path="/a-propos" element={<About />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
